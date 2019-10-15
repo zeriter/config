@@ -3,7 +3,8 @@ spring:
     name: zblog-zipkin
   zipkin:
     base-url: http://localhost:8082
-
+  main:
+    allow-bean-definition-overriding: true
 server:
   port: 8082
 
