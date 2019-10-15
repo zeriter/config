@@ -1,10 +1,6 @@
 spring:
   application:
     name: zblog-zipkin
-  boot:
-    admin:
-      client:
-        url: http://localhost:8081
   zipkin:
     base-url: http://localhost:8082
 
