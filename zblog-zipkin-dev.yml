@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: zblog-zipkin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8081
+  zipkin:
+    base-url: http://localhost:8082
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
