@@ -4,20 +4,13 @@ spring:
     name: admin-server
 server:
   port: 8083
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://192.168.0.108:8081/eureka/
-  instance：
-    instance-id：${spring.application.name}:${server.port}
-    prefer-ip-address：true
-    lease-renewal-interval-in-seconds：30
-    lease-expiration-duration-in-seconds：90
 security:
   basic:
     enabled: false
     
-logging：
-  file.path：/root/application/logs/admin
-  level.root：info
+logging:
+  file:
+    name: admin.log
+    path: /root/application/logs/admin
+  level: 
+    root: info
